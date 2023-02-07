@@ -55,7 +55,8 @@ contract Casino {
     }
 
     function reveal(uint random) external {
-        
+        uint _commitment = uint256(keccak256(abi.encodePacked(random)));
+        address payable sideA = payable(msg.sender);
         address payable sideB = payable(acceptedBet[_commitment].sideB);
     }
 }
