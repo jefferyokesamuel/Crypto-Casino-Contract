@@ -44,6 +44,8 @@ contract Casino {
     }
 
     function acceptBet(uint _commitment, uint randomValue) external payable {
+        require(!proposedBet[_commitment].accepted, "This bet has already been accepted");
+        require(proposedBet[_commitment].sideA != address(0), "No one made the Bet");
         require(proposedBet[_commitment].value == msg.value, "Proposed and accepted bets are not the same");
         acceptedBet[_commitment].sideB = msg.sender;
         acceptedBet[_commitment].acceptedAt = block.timestamp;
