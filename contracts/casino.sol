@@ -26,4 +26,6 @@ contract Casino {
         uint indexed _commitment,
         address indexed proposed
     );
+        require(proposedBet[_commitment].value == 0, "There is always a bet ")
+    }
 }
