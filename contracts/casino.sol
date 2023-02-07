@@ -16,4 +16,7 @@ contract Casino {
 
     mapping(uint => ProposedBet) public proposedBet;
     mapping(uint => AcceptedBet) public acceptedBet;
+        uint indexed _commitment,
+        address indexed proposed
+    );
 }
