@@ -44,3 +44,5 @@ contract Casino {
     }
 
     function acceptBet(uint _commitment, uint randomValue) external payable {
+        proposedBet[_commitment].accepted = true;
+    }
