@@ -19,6 +19,9 @@ contract Casino {
     event BetProposed(
         uint indexed _commitment,
         uint value
+    );
+
+    event BetAccepted(
         uint indexed _commitment,
         address indexed proposed
     );
