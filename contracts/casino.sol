@@ -45,5 +45,8 @@ contract Casino {
 
     function acceptBet(uint _commitment, uint randomValue) external payable {
         require(proposedBet[_commitment].value == msg.value, "Proposed and accepted bets are not the same");
+        acceptedBet[_commitment].sideB = msg.sender;
+        acceptedBet[_commitment].acceptedAt = block.timestamp;
+        acceptedBet[_commitment].randomB = randomValue;
         proposedBet[_commitment].accepted = true;
     }
