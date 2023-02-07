@@ -58,5 +58,7 @@ contract Casino {
         uint _commitment = uint256(keccak256(abi.encodePacked(random)));
         address payable sideA = payable(msg.sender);
         address payable sideB = payable(acceptedBet[_commitment].sideB);
+        uint _agreedRandom = random^acceptedBet[_commitment].sideB;
+        uint value = proposedBet[_commitment].value;
     }
 }
