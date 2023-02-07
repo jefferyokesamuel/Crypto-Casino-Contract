@@ -42,4 +42,3 @@ contract Casino {
         proposedBet[_commitment].placedAt = block.timestamp;
         emit BetProposed(_commitment, msg.value);
     }
-}
