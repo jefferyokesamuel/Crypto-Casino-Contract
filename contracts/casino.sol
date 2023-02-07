@@ -33,7 +33,7 @@ contract Casino {
         address loser,
         uint value
     );
-    
+
     function proposeBet(uint _commitment) external payable {
         require(proposedBet[_commitment].value == 0, "There is always a bet ");
         require(msg.value > 0, "You need to bet something");
