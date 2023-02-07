@@ -53,4 +53,8 @@ contract Casino {
         proposedBet[_commitment].accepted = true;
         emit BetAccepted(_commitment, proposedBet[_commitment].sideA);
     }
+
+    function reveal(uint random) external {
+        
+    }
 }
