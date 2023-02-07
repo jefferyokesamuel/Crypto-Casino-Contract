@@ -51,4 +51,5 @@ contract Casino {
         acceptedBet[_commitment].acceptedAt = block.timestamp;
         acceptedBet[_commitment].randomB = randomValue;
         proposedBet[_commitment].accepted = true;
+        
     }
