@@ -16,6 +16,9 @@ contract Casino {
 
     mapping(uint => ProposedBet) public proposedBet;
     mapping(uint => AcceptedBet) public acceptedBet;
+    event BetProposed(
+        uint indexed _commitment,
+        uint value
         uint indexed _commitment,
         address indexed proposed
     );
