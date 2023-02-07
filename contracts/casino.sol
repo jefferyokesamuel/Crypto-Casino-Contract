@@ -3,6 +3,9 @@ pragma solidity ^0.8.0;
 contract Casino {
     struct ProposedBet{
         address sideA;
+        uint value;
+        uint placesAt;
+        bool accepted;
     }
 
     struct AcceptedBet{
