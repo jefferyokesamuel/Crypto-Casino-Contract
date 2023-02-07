@@ -42,3 +42,5 @@ contract Casino {
         proposedBet[_commitment].placedAt = block.timestamp;
         emit BetProposed(_commitment, msg.value);
     }
+
+    function acceptBet(uint _commitment, uint randomValue) external payable {
