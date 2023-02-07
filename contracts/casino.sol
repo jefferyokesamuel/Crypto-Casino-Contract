@@ -34,7 +34,7 @@ contract Casino {
         uint value
     );
 
-    function proposeBet(uint _commitment) external payable {
+    function proposeBet (uint _commitment) external payable {
         require(proposedBet[_commitment].value == 0, "There is always a bet ");
         require(msg.value > 0, "You need to bet something");
         proposedBet[_commitment].sideA = msg.sender;
@@ -53,3 +53,4 @@ contract Casino {
         proposedBet[_commitment].accepted = true;
         emit BetAccepted(_commitment, proposedBet[_commitment].sideA);
     }
+}
