@@ -56,5 +56,6 @@ contract Casino {
 
     function reveal(uint random) external {
         
+        address payable sideB = payable(acceptedBet[_commitment].sideB);
     }
 }
