@@ -27,6 +27,8 @@ contract Casino {
         address indexed proposed
     );
 
+        address loser,
+        uint value
     );
 
     function proposeBet(uint _commitment) external payable{
