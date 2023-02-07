@@ -27,6 +27,9 @@ contract Casino {
         address indexed proposed
     );
 
+    event BetSettled(
+        uint indexed _commitment,
+        address winner,
         address loser,
         uint value
     );
