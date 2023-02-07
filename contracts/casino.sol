@@ -9,9 +9,9 @@ contract Casino {
     }
 
     struct AcceptedBet{
-        address sideB;
-        uint acceptedAt;
-        uint randomB;
+        address sideB; // Address of Bet
+        uint acceptedAt; // Timestamp 
+        uint randomB; 
     }
 
     mapping(uint => ProposedBet) public proposedBet;
