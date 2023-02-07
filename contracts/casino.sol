@@ -37,6 +37,9 @@ contract Casino {
     function proposeBet(uint _commitment) external payable {
         require(proposedBet[_commitment].value == 0, "There is always a bet ");
         require(msg.value > 0, "You need to bet something");
-
+        proposedBet[_commitment].sideA = msg.sender;
+        proposedBet[_commitment].value = msg.value;
+        proposedBet[_commitment].placedAt = block.timestamp;
+        emit BetProposed(_commitment, msg.value);
     }
 }
