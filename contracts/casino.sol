@@ -62,6 +62,7 @@ contract Casino {
         uint value = proposedBet[_commitment].value;
 
             emit BetSettled(_commitment, sideA, sideB, value);
+            emit BetSettled(_commitment, sideB, sideA, value);
     }
 
     
