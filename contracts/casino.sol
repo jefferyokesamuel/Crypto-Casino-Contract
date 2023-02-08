@@ -61,4 +61,7 @@ contract Casino {
         uint _agreedRandom = random^acceptedBet[_commitment].randomB;
         uint value = proposedBet[_commitment].value;
     }
+
+    
+
 }
