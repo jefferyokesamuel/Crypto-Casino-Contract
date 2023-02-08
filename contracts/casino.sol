@@ -76,7 +76,4 @@ contract Casino {
         delete proposedBet[_commitment];
         delete acceptedBet[_commitment];
     }
-
-    
-
 }
