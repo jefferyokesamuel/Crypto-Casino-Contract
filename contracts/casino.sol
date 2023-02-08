@@ -63,6 +63,10 @@ contract Casino {
 
             emit BetSettled(_commitment, sideA, sideB, value);
             emit BetSettled(_commitment, sideB, sideA, value);
+        }
+
+        delete proposedBet[_commitment];
+        delete acceptedBet[_commitment];
     }
 
     
