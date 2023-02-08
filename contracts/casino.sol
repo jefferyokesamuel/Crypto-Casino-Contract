@@ -62,6 +62,9 @@ contract Casino {
         uint value = proposedBet[_commitment].value;
 
             emit BetSettled(_commitment, sideA, sideB, value);
+        } else {
+            // Side B wins
+            sideB.transfer(2*value);
             emit BetSettled(_commitment, sideB, sideA, value);
         }
 
