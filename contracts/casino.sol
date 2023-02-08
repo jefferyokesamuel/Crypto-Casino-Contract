@@ -60,6 +60,8 @@ contract Casino {
         address payable sideB = payable(acceptedBet[_commitment].sideB);
         uint _agreedRandom = random^acceptedBet[_commitment].randomB;
         uint value = proposedBet[_commitment].value;
+        require (proposedBet[_commitment].sideA == msg.sender, "No you havent placed a bet");
+        require (proposedBet[_commitment].accepted, "Bet hasnt been accepted");
 
         if(_agreedRandom % 2 == 0){
             //Side A wins
