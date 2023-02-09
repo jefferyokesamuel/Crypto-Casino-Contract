@@ -10,7 +10,8 @@ describe('Casino', async function() {
     const Casino = await ethers.getContractFactory("Casino")
     const casino = await Casino.deploy()
     try{
-        tx = casio.proposeBet(hashA)
+        tx = await casino.proposeBet(hashA)
+        rcpt = await tx.wait()
     }
 });
 })
